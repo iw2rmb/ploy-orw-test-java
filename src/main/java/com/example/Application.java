@@ -1,20 +1,31 @@
 package com.example;
 
-// Unused imports that should be removed
+// These imports are ACTUALLY unused and should be removed by OpenRewrite
+import java.util.Date;
+import java.util.LinkedList;
+import java.util.TreeSet;
+import java.util.Vector;
+import java.util.Hashtable;
+import java.io.IOException;
+import java.io.File;
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.net.URL;
+import java.net.Socket;
+
+// These imports ARE used in the code
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
-import java.util.HashSet;
-import java.io.IOException;
-import java.io.File;
 
 public class Application {
     // Using StringBuffer instead of StringBuilder (should be modernized)
     private StringBuffer buffer = new StringBuffer();
     
-    // Old-style type declaration (missing diamond operator)
+    // Old-style type declaration (missing diamond operator) - USES ArrayList and List
     private List<String> items = new ArrayList<String>();
     
     public static void main(String[] args) {
@@ -30,7 +41,7 @@ public class Application {
         message.append("World");
         System.out.println(message.toString());
         
-        // Old-style collection initialization
+        // Old-style collection initialization - USES HashMap and Map
         Map<String, Integer> map = new HashMap<String, Integer>();
         map.put("one", 1);
         map.put("two", 2);
